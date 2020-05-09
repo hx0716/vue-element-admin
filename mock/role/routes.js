@@ -112,7 +112,30 @@ export const asyncRoutes = [
       }
     ]
   },
-
+  {
+    path: '/test',
+    component: 'layout/Layout',
+    children: [
+      {
+        path: 'test1',
+        component: 'views/test/test1',
+        name: 'test2',
+        meta: { title: 'test1', roles: ['admin', 'editor'] }
+      },
+      {
+        path: 'test2',
+        component: 'views/test/test2',
+        name: 'test2',
+        meta: { title: 'test2', roles: ['admin'] }
+      },
+      {
+        path: 'test3',
+        component: 'views/test/test3',
+        name: 'test3',
+        meta: { title: 'test3', roles: ['admin'] }
+      }
+    ]
+  },
   {
     path: '/icon',
     component: 'layout/Layout',
